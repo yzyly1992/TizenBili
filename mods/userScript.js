@@ -1,8 +1,3 @@
-import 'whatwg-fetch';
-import './domrect-polyfill';
-import './adblock.js';
-import './sponsorblock.js';
-import './ui.js';
-import './speedUI.js';
-import './theme.js';
-import './modernUI.js';
+import './infinite-hd.js';
+import './load-comments.js';
+import './remove-login-popup.js';

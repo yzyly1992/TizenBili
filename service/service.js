@@ -12,10 +12,10 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-const PORT = 8085;
+const PORT = 8084;
 const apps = {
-    "YouTube": {
-        name: "YouTube",
+    "Bilibili": {
+        name: "Bilibili",
         state: "stopped",
         allowStop: true,
         pid: null,
@@ -31,7 +31,7 @@ const apps = {
                     [
                         new tizen.ApplicationControlData("module", [JSON.stringify(
                             {
-                                moduleName: '@foxreis/tizentube',
+                                moduleName: '@yzyly1992/tizenbili',
                                 moduleType: 'npm',
                                 args: launchData
                             }
@@ -46,9 +46,9 @@ const dialServer = new dial.Server({
     expressApp: app,
     port: PORT,
     prefix: "/dial",
-    manufacturer: 'Reis Can',
+    manufacturer: 'David Yang',
     modelName: 'TizenBrew',
-    friendlyName: 'TizenTube',
+    friendlyName: 'TizenBili',
     delegate: {
         getApp(appName) {
             return apps[appName];
@@ -104,9 +104,9 @@ setInterval(() => {
         const tbPackageId = tizen.application.getAppInfo().packageId;
         const app = appsContext.find(app => app.appId === `${tbPackageId}.TizenBrewStandalone`);
         if (!app) {
-            apps["YouTube"].state = "stopped";
-            apps["YouTube"].pid = null;
-            apps["YouTube"].additionalData = {};
+            apps["Bilibili"].state = "stopped";
+            apps["Bilibili"].pid = null;
+            apps["Bilibili"].additionalData = {};
         }
     });
 }, 5000);
