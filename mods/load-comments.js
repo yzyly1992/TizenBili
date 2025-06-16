@@ -27,8 +27,9 @@
 // @grant        GM_setValue
 // ==/UserScript==
  
-(async function() {
-  'use strict';
+'use strict';
+
+window.addEventListener('DOMContentLoaded', async function () {
  
   // no need to continue this script if user already logged in
   if (document.cookie.includes('DedeUserID')) return;
@@ -1587,4 +1588,4 @@
     GM_registerMenuCommand("自定义设置", showSettingPanel);
   }
  
-})();
+});

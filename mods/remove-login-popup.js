@@ -11,12 +11,14 @@
 // @run-at       document-start
 // ==/UserScript==
  
-(async function() {
-  'use strict';
- 
+
+'use strict';
+
+// add event-listener to run at document-start 
+window.addEventListener('DOMContentLoaded', async function () {
   // no need to continue this script if user has logged in
   if (document.cookie.includes('DedeUserID')) return;
- 
+
   // remove 'buvid3' from cookie everytime when trying to fetch recommand video data
   const originFetch = unsafeWindow.fetch;
   unsafeWindow.fetch = function () {
@@ -25,5 +27,5 @@
     }
     return originFetch.apply(this, arguments);
   }
- 
-})();
+});
+

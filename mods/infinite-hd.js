@@ -15,8 +15,9 @@
 // @run-at       document-start
 // ==/UserScript==
  
-(async function() {
-  'use strict';
+'use strict';
+
+window.addEventListener('DOMContentLoaded', async function () {
  
   // initialize options
   const options = {
@@ -292,4 +293,4 @@
     }, 1000);
   }
  
-})();
+});
