@@ -1,6 +1,8 @@
 # TizenBili
 
-TizenBili is a TizenBrew module that enhances your favourite streaming websites viewing experience by removing ads and adding support for Sponsorblock.
+\*Project is under development, not fully functional yet.
+
+TizenBili is a TizenBrew module that enhances Bilibili websites viewing experience by removing ads and adding support for Sponsorblock.
 
 # How to install
 
