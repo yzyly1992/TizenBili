@@ -1,7 +1,7 @@
 {
   "name": "@yzyly1992/tizenbili",
   "appName": "TizenBili",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "TizenBili is wrapper of Bilibili website on your Tizen (Samsung) TVs. It is still under development",
   "packageType": "mods",
   "websiteURL": "https://www.bilibili.com?additionalDataUrl=http%3A%2F%2Flocalhost%3A8084%2Fdial%2Fapps%2FBilibili",
