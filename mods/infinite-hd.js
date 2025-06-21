@@ -18,6 +18,31 @@
 'use strict';
 
 window.addEventListener('DOMContentLoaded', async function () {
+
+  // create a floating button with HD text on the right bottom corner
+  const floatingButton = document.createElement('div');
+  floatingButton.id = 'userscript-467511-floating-button';
+  floatingButton.style = `
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #00AEEC;
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 9999999999;
+  `;
+  floatingButton.textContent = 'HD';
+  floatingButton.onclick = () => {
+    document.querySelector('#userscript-467511-setting-panel-container').style.display = 'flex';
+  };
+  document.body.appendChild(floatingButton);
  
   // initialize options
   const options = {
